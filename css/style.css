@@ -1,0 +1,37 @@
+#intro {
+    background-image: url('../assets/tree-736885_960_720.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+  }
+  
+  .text-white {
+    z-index: 1;
+  }
+  
+  .btn-outline-light {
+    color: #fff;
+    border-color: #fff;
+  }
+  
+  .btn-outline-light:hover {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  .btn-outline-light:focus {
+    box-shadow: none;
+  }
+  

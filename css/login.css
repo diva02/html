@@ -1,0 +1,16 @@
+.logcs {
+    background-image: url('../assets/tree-736885_960_720.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-repeat: no-repeat;
+    font-weight: bolder;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  .card-header {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,24,83,1) 38%);
+  }
+  .card {
+    border-color: rgba(255,24,83,1);
+  }

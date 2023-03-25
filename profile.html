@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Profile Page</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  </head>
+  <body class="prof">
+    <div class="container">
+      <h1>Welcome to your profile page</h1>
+      <form id="profile-form" method="POST" action="update-profile.php">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" class="form-control" value="John Doe" readonly>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" class="form-control" value="johndoe@example.com" readonly>
+        </div>
+        <div class="form-group">
+          <label for="age">Age:</label>
+          <input type="number" id="age" name="age" class="form-control" value="25" readonly>
+        </div>
+        <div class="form-group">
+          <button type="button" onclick="editProfile()" class="btn btn-primary">Edit Profile</button>
+          <button type="submit" style="display: none;" class="btn btn-success">Save Changes</button>
+          <button type="button" onclick="cancelEdit()" style="display: none;" class="btn btn-danger">Cancel</button>
+        </div>
+      </form>
+      <a href="logout.php" class="btn btn-outline-secondary">Logout</a>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+      function editProfile() {
+        // Make the form fields editable
+        document.getElementById("name").readOnly = false;
+        document.getElementById("email").readOnly = false;
+        document.getElementById("age").readOnly = false;
+        // Show the Save Changes and Cancel buttons
+        document.getElementsByTagName("button")[0].style.display = "none";
+        document.getElementsByTagName("button")[1].style.display = "inline-block";
+        document.getElementsByTagName("button")[2].style.display = "inline-block";
+      }
+
+      function cancelEdit() {
+        // Disable the form fields
+        document.getElementById("name").readOnly = true;
+        document.getElementById("email").readOnly = true;
+        document.getElementById("age").readOnly = true;
+        // Hide the Save Changes and Cancel buttons
+        document.getElementsByTagName("button")[0].style.display = "inline-block";
+        document.getElementsByTagName("button")[1].style.display = "none";
+        document.getElementsByTagName("button")[2].style.display = "none";
+        // Reset the form values to their original values
+        document.getElementById("name").value = "Hello";
+        document.getElementById("email").value = "guh@mail.com";
+        document.getElementById("age").value = "15";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="httpfs://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">m6j
+</head>
+<body class="bg-body">
+    
+    
+    <div id="intro" class="bg-image shadow-2-strong">
+        <div class="mask" >
+          <div class="container d-flex align-items-center justify-content-center text-center h-100">
+            <div class="text-white">
+              <h1 class="mb-3">Hello!!</h1>
+              <h5 class="mb-4">Welcome to my Website</h5>
+            <div><a href="register.html" class="btn btn-outline-light btn-lg m-2"  role="button"
+               target="_blank">Register</a></div>
+            <div> <a href="login.html" class="btn btn-outline-light btn-lg m-2"  target="_blank"
+                role="button">Login</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+      
+      <script>
+        // session maintanence and authentication
+        function login() {
+          console.log(window.localStorage.getItem('user'));
+          if(window.localStorage.getItem('user') != null){
+           window.location.href = "profile.html";
+          }
+    
+          else {
+            window.location.href = "login.html"; 
+          }
+        }
+        function signup() {
+          if(window.localStorage.getItem('user') != null){
+            window.location.href = "profile.html";
+          }
+    
+          else {
+            window.location.href = "register.html"; 
+          }
+        }
+        
+      </script>
+    </body>
+    </html>
